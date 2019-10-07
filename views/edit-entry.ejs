@@ -1,0 +1,84 @@
+<% include header %>
+<% if (students.length) { %>
+  <% students.forEach(function(student) { %>
+<h2>Edit information</h2>
+
+<form method="post" role="form">
+
+    <div class="form-group">
+    <label for="sid">Student id: <%= student.sid %></label>
+
+    <!-- <input type="text" class="form-control" id="<%= student.sid %>"
+     name="<%= student.sid %>" placeholder="<%= student.sid %>" required>
+  </div> -->
+  <div class="form-group">
+
+  <div class="form-group">
+    <label for="first_name">First name:</label>
+
+    <input type="text" class="form-control" id="first_name"
+     name="first_name" placeholder="<%= student.first_name %>" required>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="last_name">Last name:</label>
+
+    <input type="text" class="form-control" id="last_name"
+     name="last_name" placeholder="<%= student.last_name %>" required>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="gender">Gender:</label>
+
+    <select name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="birthday">Birthday:</label>
+
+    <input type="text" class="form-control" id="birthday"
+     name="birthday" placeholder="<%= student.birthday %>" required>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="level">Level:</label>
+
+    <select name="level">
+        <option value="Freshman">Freshman</option>
+        <option value="Sophomore">Sophomore</option>
+        <option value="Junior">Junior</option>
+        <option value="Senior">Senior</option>
+      </select>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="status">Status:</label>
+
+    <select name="status">
+        <option value="Regular">Regular</option>
+        <option value="Irregular">Irregular</option>
+      </select>
+  </div>
+  <div class="form-group">
+      
+
+    <input type="submit" value="SAVE" class="btn btn-primary">
+    <a href= '/studentlist'class="btn btn-primary pull-right">
+      BACK
+  </a>
+  </div>
+</form>
+<% }) %>
+<% } else { %>
+  No entries! <a href="/new-entry">Add one!</a>
+<% } %>
+
+<% include footer %>

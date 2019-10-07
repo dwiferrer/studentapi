@@ -1,0 +1,28 @@
+<% include header %>
+<% if (students.length) { %>
+  <% students.forEach(function(student) { %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= student.first_name %>
+        <%= student.last_name %>
+      </div>
+      <div class="panel-body">
+        <%= student.sid %>
+      <a href= '/delete/<%= student.sid %>'class="btn btn-primary pull-right"
+          onclick="return confirm('Are you sure you want to delete')">
+          DELETE
+      </a>
+      <a href= '/edit/<%= student.sid %>'class="btn btn-primary pull-right"
+        onclick='f'>
+          EDIT
+      </a>
+      <a href= '/profile/<%= student.sid %>'class="btn btn-primary pull-right">
+        VIEW
+    </a>
+      </div>
+    </div>
+  <% }) %>
+<% } else { %>
+  No entries! <a href="/new-entry">Add one!</a>
+<% } %>
+<% include footer %>

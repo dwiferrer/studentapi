@@ -1,0 +1,82 @@
+<% include header %>
+<h2>Enroll a new student</h2>
+
+<form method="post" role="form">
+
+    <div class="form-group">
+    <label for="sid">Student id:</label>
+
+    <input type="text" class="form-control" id="sid"
+     name="sid" placeholder="eg. 1234-ABCDE" required>
+  </div>
+  <div class="form-group">
+
+  <div class="form-group">
+    <label for="first_name">First name:</label>
+
+    <input type="text" class="form-control" id="first_name"
+     name="first_name" placeholder="First name" required>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="last_name">Last name:</label>
+
+    <input type="text" class="form-control" id="last_name"
+     name="last_name" placeholder="Last name" required>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="gender">Gender:</label>
+
+    <!-- <input type="text" class="form-control" id="gender"
+     name="gender" required> -->
+     <select name="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="birthday">Birthday:</label>
+
+    <input type="text" class="form-control" id="birthday"
+     name="birthday" placeholder="MM-DD-YYYY" required>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="level">Level:</label>
+    <!-- <input type="text" class="form-control" id="level"
+     name="level" placeholder="F/S/JR/SR" required> -->
+     <select name="level">
+        <option value="Freshman">Freshman</option>
+        <option value="Sophomore">Sophomore</option>
+        <option value="Junior">Junior</option>
+        <option value="Senior">Senior</option>
+      </select>
+  </div>
+  <div class="form-group">
+
+    <div class="form-group">
+    <label for="status">Status:</label>
+    <!-- <input type="text" class="form-control" id="status"
+     name="status" required> -->
+     <select name="status">
+        <option value="Regular">Regular</option>
+        <option value="Irregular">Irregular</option>
+      </select>
+  </div>
+  <div class="form-group">
+      
+
+    <input type="submit" value="SAVE" class="btn btn-primary">
+    <a href= '/studentlist'class="btn btn-primary pull-right">
+      BACK
+  </a>
+  </div>
+</form>
+
+<% include footer %>

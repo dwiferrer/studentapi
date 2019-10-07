@@ -1,0 +1,24 @@
+<% include header %>
+<!-- <% if (students.length) { %>
+  <% students.forEach(function(student) { %> -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= student.first_name %>
+        <%= student.last_name %>
+      </div>
+      <div class="panel-body">
+        <%= student.sid %>
+        <%= student.gender %>
+        <%= student.birthday %>
+        <%= student.level %>
+        <%= student.status %>
+      </div>
+    </div>
+    <a href= '/studentlist'class="btn btn-primary pull-right">
+      BACK
+  </a>
+  <% }) %>
+<!-- <% } else { %>
+  No entries! <a href="/new-entry">Add one!</a>
+<% } %> -->
+<% include footer %>
